@@ -3,24 +3,216 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Contato</title>
      <script src="script.js"></script>
      <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header>
-    <h1><img src="logo-site.png" alt="Logotipo do site" width="10%"> O consumo de água da inteligência artificial</h1> 
-    <nav aria-label="Menu principal">
-        <a href="index.html">Início</a>
-        <a href="sobre.html">Sobre</a>
-        <a href="tema.html">Tema</a>
-        <a href="midia.html">Midia</a>
-        <a href="contato.html">Contato</a>
-        <a href="extra.html">Extra</a>
-    </nav>
-</header>
-    <main>
-      <p>contato</p>
+
+    <!-- CABEÇALHO -->
+    <header class="cabecalho">
+        <div class="logo">
+            <div class="logo-icone">💧</div>
+
+            <div>
+                <h2>IA e Água</h2>
+                <p>Tecnologia com consciência</p>
+            </div>
+        </div>
+
+        <nav>
+            <a href="inicio.html">inicio</a>
+            <a href="sobre.html">sobre</a>
+            <a href="tema.html">Tema</a>
+            <a href="midia.html">Mídia</a>
+            <a href="contato.html" class="ativo">Contato</a>
+            <a href="extra">extra</a>
+        </nav>
+    </header>
+
+    <!-- BANNER -->
+    <section class="banner">
+        <div class="banner-texto">
+            <h1>Contato</h1>
+
+            <p>
+                Tire suas dúvidas, envie sua mensagem<br>
+                ou entre em contato conosco. Será um prazer<br>
+                falar com você!
+            </p>
+        </div>
+
+        <section class="banner">
+        <div class="banner-imagem">
+        <img src="imagens/banner.jpeg">
+        </div>
+       </section>
+
+
+    </section>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="conteudo">
+
+        <!-- INFORMAÇÕES DE CONTATO -->
+        <section class="cartao informacoes">
+
+            <h2>Fale com a gente</h2>
+
+            <p class="descricao">
+                Estamos sempre disponíveis para responder
+                suas dúvidas, sugestões e parcerias. Você pode
+                entrar em contato pelos nossos canais ou
+                nos enviar uma mensagem pelo formulário ao lado.
+            </p>
+
+            <div class="contato-item">
+                <div class="icone endereco-icone">📍</div>
+
+                <div>
+                    <h3>Endereço</h3>
+                    <p>Rua das Tecnologias, 123</p>
+                    <p>São Paulo - PG, 01000-000</p>
+                </div>
+            </div>
+
+            <div class="contato-item">
+                <div class="icone email-icone">✉</div>
+
+                <div>
+                    <h3>E-mail</h3>
+                    <p>contato@iaeagua.com</p>
+                </div>
+            </div>
+
+            <div class="contato-item">
+                <div class="icone telefone-icone">☎</div>
+
+                <div>
+                    <h3>Telefone</h3>
+                    <p>(13) 99999-9999</p>
+                    <p>Segunda a sexta, das 8h às 18h</p>
+                </div>
+            </div>
+
+            <div class="mensagem-sustentavel">
+                <span class="folha-icone">🌿</span>
+
+                <div>
+                    <h3>Juntos por um futuro mais sustentável</h3>
+
+                    <p>
+                        Sua mensagem é muito importante para nós.
+                        Vamos construir soluções mais conscientes
+                        para o uso da água na tecnologia.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- FORMULÁRIO -->
+        <section class="cartao formulario">
+
+            <h2>Envie sua mensagem</h2>
+
+            <p class="descricao-formulario">
+                Preencha os campos abaixo e entraremos em
+                contato o mais breve possível.
+            </p>
+
+            <form action="#" method="post">
+
+                <div class="campos-duplos">
+
+                    <div class="campo">
+                        <label for="nome">Nome completo</label>
+                        <input
+                            type="text"
+                            id="nome"
+                            name="nome"
+                            placeholder="Seu nome completo"
+                            required
+                        >
+                    </div>
+
+                    <div class="campo">
+                        <label for="email">E-mail</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="seuemail@exemplo.com"
+                            required
+                        >
+                    </div>
+
+                </div>
+
+                <div class="campo">
+                    <label for="assunto">Assunto</label>
+                    <input
+                        type="text"
+                        id="assunto"
+                        name="assunto"
+                        placeholder="Qual é o assunto?"
+                        required
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="mensagem">Sua mensagem</label>
+                    <textarea
+                        id="mensagem"
+                        name="mensagem"
+                        placeholder="Escreva sua mensagem aqui..."
+                        rows="5"
+                        required
+                    ></textarea>
+                </div>
+
+                <button type="submit">
+                    ➤ &nbsp; Enviar mensagem
+                </button>
+
+            </form>
+
+        </section>
+
     </main>
+
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+
+        <div class="logo logo-rodape">
+            <div class="logo-icone">💧</div>
+
+            <div>
+                <h2>IA e Água</h2>
+                <p>Tecnologia com consciência</p>
+            </div>
+        </div>
+
+        <div class="rodape-links">
+
+            <a href="inicio.html">inicio</a>
+            <a href="sobrehtml">sobre</a>
+            <a href="tema.html">Tema</a>
+            <a href="midia.html">Mídia</a>
+            <a href="contato.html">Contato</a>
+            <a href="extra">extra</a>
+        </div>
+
+        <div class="redes-sociais">
+            <a href="#" aria-label="Instagram">◎</a>
+            <a href="#" aria-label="YouTube">▶</a>
+            <a href="mailto:contato@iaeagua.com"
+               aria-label="E-mail">✉</a>
+        </div>
+
+    </footer>
+
 </body>
 </html>
