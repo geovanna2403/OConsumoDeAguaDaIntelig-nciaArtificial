@@ -560,6 +560,156 @@ h3{
 
 /*contato==========================================================================================================*/
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f0;
+    color: #243d5b;
+}
+
+/* Banner superior */
+.banner {
+    height: 280px;
+    background-image: url("imagens/banner.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 30px 8%;
+}
+
+.banner nav {
+    display: flex;
+    gap: 35px;
+}
+
+.banner a {
+    color: #243d5b;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Área do formulário */
+.contato {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 45px 25px 65px;
+}
+
+.contato h1 {
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.contato p {
+    color: #65758a;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Campos do formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.campos {
+    display: flex;
+    gap: 20px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #d5dce0;
+    border-radius: 6px;
+    background-color: transparent;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    color: #243d5b;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+    outline: 2px solid #319d9a;
+    border-color: #319d9a;
+}
+
+/* Botão de envio */
+button {
+    width: fit-content;
+    padding: 17px 30px;
+    border: none;
+    border-radius: 35px;
+    background-color: #258f91;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1b7378;
+}
+
+/* Rodapé */
+footer {
+    background-color: #243d68;
+    color: white;
+    padding: 35px 20px;
+    text-align: center;
+}
+
+footer nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer p {
+    font-size: 13px;
+    color: #dce5ef;
+}
+
+/* Ajuste para celulares */
+@media (max-width: 600px) {
+    .campos {
+        flex-direction: column;
+    }
+
+    .banner {
+        height: 200px;
+    }
+
+    .contato h1 {
+        font-size: 27px;
+    }
+
+    footer nav {
+        flex-wrap: wrap;
+    }
+}
+
+
+
+
 /*extra==========================================================================================================*/
 
 /* ===== TABELA FUTURISTA ===== */
