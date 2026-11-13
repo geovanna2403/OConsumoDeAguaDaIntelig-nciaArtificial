@@ -93,32 +93,6 @@ body {
     opacity: 0.85;
 }
 
-
-
-/* LINKS */
-.rodape-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: flex-end;
-}
-
-.rodape-links a {
-    color: #DFF3E1;
-    text-decoration: none;
-    font-size: 14px;
-    padding: 9px 13px;
-    border: 1px solid #0F6B4F;
-    border-radius: 7px;
-    transition: 0.3s;
-}
-
-.rodape-links a:hover {
-    background-color: #0F6B4F;
-    border-color: #1E6FB8;
-    color: #DFF3E1;
-}
-
 /* FAIXA INFERIOR */
 .rodape-final {
     border-top: 1px solid #0F6B4F;
@@ -405,7 +379,32 @@ h3{
 }
 
 /*sobre==========================================================================================================*/
+.identificacao-site {
+    color: #A5E9E6;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-align: center;
+    margin: 0 0 20px;
+}
+/* Cabeçalho exclusivo da página Sobre */
 
+.cabecalho-sobre {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.cabecalho-sobre .identificacao-site {
+    margin: 0;
+    text-align: center;
+}
+
+.cabecalho-sobre nav {
+    justify-content: center;
+}
 /* NOSSA MISSÃO */
 
 .nossa-missao {
@@ -644,7 +643,10 @@ h3{
 }
 
 
-
+.criadora img {
+    border: 3px solid #20323F;
+    border-radius: 12px;
+}
 
 
 /*tema==========================================================================================================*/
@@ -1383,16 +1385,6 @@ body {
     background-color: #f8fcfc;
 }
 
-/* CABEÇALHO */
-.cabecalho {
-    min-height: 92px;
-    background: #123447;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 8%;
-    gap: 25px;
-}
 
 .logo {
     display: flex;
@@ -2441,4 +2433,9 @@ form button:hover {
 }
 
 
+/* CORREÇÃO DAS SEÇÕES AZUIS */
 
+.hero,
+.fontes {
+    border-radius: 0;
+}
