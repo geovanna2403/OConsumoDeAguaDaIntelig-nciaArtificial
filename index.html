@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-
- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" 
+<!--link para bootstrap-->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"      
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
  integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
+<!-- link pa pagina CSS e JavaScript -->    
     <link rel="icon" type="image/png" href="logo-site.png">
-    <script src="script.js"></script>
+    <script src="script.js" defer ></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -24,33 +25,75 @@
  Rhuan Fonseca
  Luis Felipe
   -->   
-
-
-
 <body>
-    <header class="cabecalho-site">
+    <header class="cabecalho-site">    <!-- cabeçalho do site -->  
+     
+    <nav class="navbar navbar-expand-lg navbar-dark">
 
-    <nav aria-label="Menu principal">
-        <a href="index.html">Início</a>
-        <a href="sobre.html">Sobre</a>
-        <a href="tema.html">Tema</a>
-        <a href="midia.html">Midia</a>
-        <a href="contato.html">Contato</a>
-        <a href="extra.html">Extra</a>
+        <div class="container-fluid">
+
+            <!-- Botão que aparece no celular -->                 
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menuPrincipal"
+                aria-controls="menuPrincipal"
+                aria-expanded="false"
+                aria-label="Abrir menu">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <!-- Links do menu -->
+            <div class="collapse navbar-collapse" id="menuPrincipal">   <!-- Links do menu-->  
+
+                <ul class="navbar-nav">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Início</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="sobre.html">Sobre</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="tema.html">Tema</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="midia.html">Mídia</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contato.html">Contato</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="extra.html">Extra</a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+
     </nav>
+
 </header>
+
     <main>
          <section class="hero">
     <h1>O consumo de água da inteligência artificial</h1>
     
-    <a href="tema.html" class="botao-saiba">
+    <a href="tema.html" class="botao-saiba">    <!--foto com gota e botão para saiba mais-->  
         Saiba Mais
     </a>
     </section>
-    <div class="apresentacao">
+    <div class="apresentacao container-fluid">
 
         <div class="textohome">
-    <h1>inteligências artificiais</h1>
+    <h1>inteligências artificiais</h1>   <!--texto inicial-->  
             <p>A inteligência artificial (IA) está cada vez mais presente em nosso cotidiano, facilitando tarefas,
              criando imagens e transformando a maneira como acessamos informações. Porém, por trás desses avanços tecnológicos,
               existe um impacto ambiental que nem sempre percebemos. O funcionamento dessas ferramentas exige grandes quantidades de 
@@ -70,10 +113,10 @@
    <div class="imagem-home">
     <figure>
         
-   <img src="foto-index.png" alt="imagem de uma breve introdução ao Tema" >
+   <img src="foto-index.png" alt="imagem de uma breve introdução ao Tema" > 
 
    <figcaption>
-       Entenda como a inteligência artificial consome água.
+       Entenda como a inteligência artificial consome água. <!-- descrição da imagem -->
     </figcaption>
 </figure>
     </div>
@@ -83,56 +126,11 @@
 
      <h3>Saiba mais informações no nosso site</h3>
 
-    <section class="cards">
-    
-    <article class="card">
-            <h3>Introdução.</h3>
-            <a href="tema.html#parte1" class="botao-saiba-mais">
-         Saiba mais
-        </a>
-        </article>
- 
-
-        <article class="card">
-            <h3>Como a inteligência artificial consome água?</h3>
-            <a href="tema.html#parte2" class="botao-saiba-mais">
-           Saiba mais
-          </a>
-        </article>
-
-
-       <article class="card">
-        <h3>Consequências para o meio ambiente.</h3>
-        <a href="tema.html#parte3" class="botao-saiba-mais">
-            Saiba mais
-        </a>
-       </article>
-        
-        <article class="card">
-      <h3>Como reduzir o consumo de água da inteligência artificial.</h3>
-      <a href="tema.html#parte4" class="botao-saiba-mais">
-          Saiba mais
-      </a>
-        </article>
-
-        <article class="card">
-      <h3>O futuro da inteligência artificial e da água.</h3>
-      <a href="tema.html#parte5" class="botao-saiba-mais">
-          Saiba mais
-      </a>
-        </article>
-
-         <article class="card">
-      <h3>Conclusão.</h3>
-      <a href="tema.html#parte6" class="botao-saiba-mais">
-          Saiba mais
-      </a>
-        </article>
-
+     <section class="cards" id="lista-assuntos">  <!--cards que criamos com codigo js para implementalo ao site-->
 </section>
 
 <section class="citacao-destaque">
-    <span class="citacao-etiqueta">REFLEXÃO</span>
+    <span class="citacao-etiqueta">REFLEXÃO</span>   <!--frase relexiva-->
 
     <blockquote>
         O avanço da inteligência artificial também exige
@@ -148,9 +146,9 @@
     <section>
     </main>
 
-     <footer class="rodape">
+     <footer class="rodape">   <!--rodape do site com links de navegação informações do projeto-->
         <div class="rodape-conteudo">
-            <div class="rodape-projeto"></div>
+            
     <p>Projeto consumo de água na inteligência artificial - 2026</p>
   </div>
     <nav>
@@ -167,9 +165,9 @@
      <p>© 2026 — Projeto acadêmico</p>
       <p>
         Fonte de pesquisa:
-        <a href="https://periodicos.ifsc.edu.br/index.php/snctifsc/article/view/4434/5319"
+        <a href="https://periodicos.ifsc.edu.br/index.php/snctifsc/article/view/4434/5319" 
            target="_blank"> O custo invisível da inteligência artificial generativa </a>
-    </p>
+    </p><!-- fonte do que foi usado na pagina index-->
      </div>
    </footer>
 

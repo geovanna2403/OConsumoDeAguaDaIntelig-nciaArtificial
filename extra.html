@@ -12,19 +12,63 @@
  integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
  
      <link rel="icon" type="image/png" href="logo-site.png">
-     <script src="script.js"></script>
+     <script src="script.js" defer></script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="cabecalho-site">
-       
-    <nav aria-label="Menu principal">
-        <a href="index.html">Início</a>
-        <a href="sobre.html">Sobre</a>
-        <a href="tema.html">Tema</a>
-        <a href="midia.html">Midia</a>
-        <a href="contato.html">Contato</a>
-        <a href="extra.html">Extra</a>
+
+    <header class="cabecalho-site cabecalho-nome">
+        <h1 class="identificacao-site"> O consumo de água da inteligência artificial</h1>
+    <nav class="navbar navbar-expand-lg">
+
+        <div class="container-fluid">
+
+            <!-- Botão que aparece no celular -->
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menuPrincipal"
+                aria-controls="menuPrincipal"
+                aria-expanded="false"
+                aria-label="Abrir menu">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <!-- Links do menu -->
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+
+                <ul class="navbar-nav">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Início</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="sobre.html">Sobre</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="tema.html">Tema</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="midia.html">Mídia</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contato.html">Contato</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="extra.html">Extra</a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+
     </nav>
 </header>
     <main>
@@ -151,6 +195,48 @@
    target="_blank" rel="noopener noreferrer"> Nuvem Datacom — A Evolução dos Data Centers (2024). </a>
     </p>
 </section>
+  <h3> Curiosidade ↓</h3>
+<div class="curiosidade">
+    <button id="botaoCuriosidade" type="button">
+        Você sabia?
+    </button>
+
+   <div id="mensagemCuriosidade" hidden>
+    <h3>O risco de extinção das abelhas</h3>
+
+    <p>
+        As abelhas são essenciais para o equilíbrio ambiental,
+         pois realizam a polinização de diversas plantas. Segundo a Organização das Nações Unidas para a Alimentação e a Agricultura (FAO), esse processo contribui para a produção de mais de 75% das culturas agrícolas do mundo,
+         incluindo frutas, legumes, nozes e sementes.
+    </p>
+
+    <p>
+        Apesar de sua importância, as populações de abelhas estão diminuindo devido a fatores como perda de habitats, uso 
+        de agrotóxicos, agricultura intensiva e mudanças climáticas.
+    </p>
+<p>  Além dessas ameaças, a expansão dos centros de dados utilizados pela inteligência artificial também levanta preocupações ambientais. Essas instalações demandam grandes quantidades de energia e água e podem gerar calor e impactos relacionados à infraestrutura elétrica. Um artigo da OpGov News aponta possíveis riscos dessa infraestrutura para as abelhas, como alterações no ambiente e possíveis interferências de campos eletromagnéticos. Entretanto,
+     esses efeitos ainda precisam de mais estudos científicos.</p>
+
+     <p>O desaparecimento das abelhas poderia provocar consequências em cadeia: redução da polinização, prejuízos à reprodução de plantas, diminuição
+         da biodiversidade e impactos na produção de alimentos.</p>
+
+<p>Por isso, é importante pensar não apenas nos avanços tecnológicos, mas também nos impactos que eles podem causar ao meio ambiente. Afinal, o desenvolvimento da tecnologia
+     precisa caminhar junto com a preservação da natureza.</p>
+
+    <p>
+        <strong>Fontes:</strong>
+        <a href="https://www.nationalgeographicbrasil.com/animais/2025/04/dia-da-terra-por-que-a-extincao-das-abelhas-pode-provocar-o-caos-no-planeta"
+        target="_blank" rel="noopener noreferrer">
+            National Geographic Brasil. 
+        </a>
+          
+        <a href="https://opgov.news/articles/are-ai-data-centers-dangerous-to-bees"
+        target="_blank" rel="noopener noreferrer">
+            OpGov News. 
+        </a>
+    </p>
+</div>
+</div>
 
 
 
@@ -380,15 +466,11 @@
 
 
 
-
-
-
-
     </main>
 
       <footer class="rodape">
         <div class="rodape-conteudo">
-            <div class="rodape-projeto"></div>
+           
     <p>Projeto consumo de água na inteligência artificial - 2026</p>
   </div>
     <nav>

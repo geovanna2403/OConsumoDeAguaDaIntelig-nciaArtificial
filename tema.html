@@ -4,22 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>tema</title>
-     <script src="script.js"></script>
+     <script src="script.js" defer></script>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js" integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu" crossorigin="anonymous"></script>
     <link rel="icon" type="image/png" href="logo-site.png">
      <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header> 
-    <nav aria-label="Menu principal">
-        <a href="index.html">Início</a>
-        <a href="sobre.html">Sobre</a>
-        <a href="tema.html">Tema</a>
-        <a href="midia.html">Midia</a>
-        <a href="contato.html">Contato</a>
-        <a href="extra.html">Extra</a>
-        </nav>
 
+
+    <header class="cabecalho-site cabecalho-nome">
+      <h1 class="identificacao-site"> O consumo de água da inteligência artificial</h1> 
+     <nav class="navbar navbar-expand-lg">
+>>>>>>> 85e5149 (Atualiza páginas, estilos e imagens do site)
+
+        <div class="container-fluid">
+
+            <!-- Botão que aparece no celular -->
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menuPrincipal"
+                aria-controls="menuPrincipal"
+                aria-expanded="false"
+                aria-label="Abrir menu">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+
+                <ul class="navbar-nav">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Início</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="sobre.html">Sobre</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="tema.html">Tema</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="midia.html">Mídia</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contato.html">Contato</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="extra.html">Extra</a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+
+    </nav>
+</header>
       <main>
 
          <!--parte 1-->
@@ -31,9 +78,9 @@
       Introdução
     </h2>
 
-    <div class="introducao-conteudo">
+    <div class="introducao-conteudo row align-items-center g-4">
        
-       <div class="texto-introducao">
+       <div class="texto-introducao col-12 col-lg-6">
    
         <p>A inteligência artificial (IA) está cada vez mais presente em nosso cotidiano, sendo utilizada para responder perguntas, criar imagens, produzir textos e auxiliar em diversas atividades. Apesar de facilitar muitas tarefas, seu funcionamento também pode gerar impactos ambientais, incluindo o consumo de água.
 
@@ -42,10 +89,10 @@
         Por isso, compreender a relação entre inteligência artificial e recursos hídricos é importante para incentivar o desenvolvimento de tecnologias mais eficientes e sustentáveis.</p>
 
         </div>
-
-        <img src="Data center futurista em azul e aço.png" alt="datacenter futurista">
-
-         </div>
+<div class="col-12 col-lg-5">
+   <img src="Data center futurista em azul e aço.png" alt="datacenter futurista">
+</div>
+    </div>
        
     </section>
 
@@ -58,22 +105,64 @@
         Como a inteligência artificial consome água?
     </h2>
 
-    <div class="consumo-conteudo">
+    <div class="consumo-conteudo row g-4 align-items-start">
 
         <!-- LADO ESQUERDO -->
-        <div class="consumo-texto">
+        <div class="consumo-texto col-12 col-lg-6">
 
       
         <p>A inteligência artificial não utiliza água diretamente da mesma forma que uma pessoa ou uma máquina de lavar. O consumo acontece principalmente na infraestrutura necessária para manter essa tecnologia funcionando.
 
         Os computadores responsáveis por processar as informações produzem calor e precisam ser resfriados para evitar superaquecimento. Alguns centros de dados utilizam sistemas de refrigeração que consomem água, enquanto outros utilizam tecnologias diferentes. A geração da eletricidade utilizada nesses locais e a fabricação de chips também podem exigir grandes quantidades de água.</p>
     
-        <img src="" alt="data-center">
+
+        <div class="col-12 col-lg-6">
+<!-- CARROSSEL DE IMAGENS -->
+<div id="car" class="carousel slide" data-bs-ride="carousel">
+
+    <!-- Indicadores -->
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#car" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#car" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#car" data-bs-slide-to="2"></button>
+    </div>
+
+    <!-- Imagens -->
+    <div class="carousel-inner">
+
+        <div class="carousel-item active">
+            <img src="Tipos-de-bancos-de-dados.jfif" class="d-block w-100" alt="Tipos de bancos de dados">
+        </div>
+
+        <div class="carousel-item">
+            <img src="Data-Centers-no-Brasil_ Ranking-por-Estados.png" class="d-block w-100" alt="Mapa aonde fica os data centers no Brasil">
+        </div>
+
+        <div class="carousel-item">
+            <img src="REGIÕES-DO-BRASIL-IBGE.jfif" class="d-block w-100" alt="Mapa das regiões do Brasil">
+        </div>
+
+    </div>
+
+    <!-- Botão anterior -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#car" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <!-- Botão próximo -->
+    <button class="carousel-control-next" type="button" data-bs-target="#car" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+
+</div>
+       
+</div>
+>>>>>>> 85e5149 (Atualiza páginas, estilos e imagens do site)
 
        </div>
 
        <!-- LADO DIREITO -->
-        <div class="formas-consumo">
+        <div class="formas-consumo col-12 col-lg-6">
             
           <!--lista não ordenada-->
         <h3>Principais formas de consumo de água:</h3>
@@ -132,7 +221,7 @@
 
 
         <!--parte 3-->
-        <div class="container">
+        <div class="container-tema">
     <section class="parte" id="parte3">
         <h2>
         <span class="numero">3</span>
@@ -157,7 +246,7 @@
 
         <div class="impactos">
 
-        <img src="IA e o Equilíbrio da Água (1).png" alt="impactos-ambientais" class="impactos no ecossistema">
+        <img src="IA e o Equilíbrio da Água (1).png" alt="impactos-ambientais" class="impactos no ecossistema img-fluid">
          </div>
         
         </section>
@@ -165,7 +254,7 @@
        <!--parte 4-->
 
     <section class="parte">
-        <section class="Como reduzir o consumo de água da inteligência artificial " id="parte4">
+        <section class="Como reduzir o consumo de água da inteligência artificial container-fluid" id="parte4">
 
          <h2>
         <span class="numero">4</span>
@@ -187,7 +276,7 @@
          </section>
 
 
-        <section class="O que os usuários podem fazer">
+        <section class="O que os usuários podem fazer container-fluid">
 
          <h3>O que os usuários podem fazer?</h3>
 
@@ -210,7 +299,7 @@
 
     <!-- PARTE 5 -->
 
-      <section class="bloco5" id="parte5">
+      <section class="bloco5 container-fluid" id="parte5">
 
     <div class="item-final">
         <h2>
@@ -235,10 +324,11 @@
             para as futuras gerações.
         </p>
     </div>
+</section>
 
     <!-- PARTE 6 -->
 
-     <section class="conclusao" id="parte6">
+     <section class="conclusao container-fluid" id="parte6">
 
     <div class="item-final">
         <h2>
@@ -309,13 +399,10 @@
 
 <footer class="rodape">
 
-    <div class="rodape-superior">
-
-        <p class="rodape-logo">
+    <div class="rodape-conteudo">
            <p> Projeto consumo de água na inteligência artificial - 2026</p>
-        </p>
-
-        <nav class="rodape-menu">
+        </div>
+        <nav>
             <a href="index.html">Início</a>
             <a href="sobre.html">Sobre</a>
             <a href="tema.html">Tema</a>
@@ -326,20 +413,13 @@
 
     </div>
 
-    <div class="rodape-inferior">
-
-        <p>
-            Os dados apresentados na página de contato são fictícios.
-            &nbsp; © 2026 — Projeto acadêmico
-            &nbsp; Fonte de pesquisa:
-            <a href="#">O custo invisível da inteligência artificial generativa</a>
-        </p>
-
-    </div>
-
+    <div class="rodape-final">
+    <p>Os dados apresentados na página de contato são fictícios.</p>
+     <p>© 2026 — Projeto acadêmico</p>
+     </div>
 </footer>
 
-           <br/>
+
    
 </body>
 </html>

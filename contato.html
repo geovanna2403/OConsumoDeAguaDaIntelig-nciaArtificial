@@ -4,23 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css"
+     rel="stylesheet" integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" 
+     crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js"
+ integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu" 
+ crossorigin="anonymous"></script>
+
     <link rel="icon" type="image/png" href="logo-site.png">
     <link rel="stylesheet" href="style.css">
+     <script src="script.js" defer ></script>
 </head>
 
 <body>
 
     <!-- CABEÇALHO -->
-    <header class="cabecalho-site">
+    <header class="cabecalho-site cabecalho-nome">
+         <h1 class="identificacao-site"> O consumo de água da inteligência artificial</h1>
+         <nav class="navbar navbar-expand-lg">
 
-        <nav>
-            <a href="index.html">Início</a>
-            <a href="sobre.html">Sobre</a>
-            <a href="tema.html">Tema</a>
-            <a href="midia.html">Mídia</a>
-            <a href="contato.html" class="ativo">Contato</a>
-            <a href="extra.html">Extra</a>
-        </nav>
+        <div class="container-fluid">
+
+            <!-- Botão que aparece no celular -->
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menuPrincipal"
+                aria-controls="menuPrincipal"
+                aria-expanded="false"
+                aria-label="Abrir menu">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+       <div class="collapse navbar-collapse" id="menuPrincipal">
+
+                <ul class="navbar-nav">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Início</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="sobre.html">Sobre</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="tema.html">Tema</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="midia.html">Mídia</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contato.html">Contato</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="extra.html">Extra</a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+
+    </nav>
 
     </header>
 
@@ -160,6 +210,51 @@
                             required>
                     </div>
 
+                     <div class="campo">
+                      <label for="telefone">Telefone</label>
+
+                          <input
+                        type="tel"
+                           id="telefone"
+                          name="telefone"
+                     placeholder="(00) 00000-0000"
+                           required>
+                            </div>
+
+                           <div class="campo">
+    <label for="estado">Estado</label>
+
+    <select id="estado" name="estado" required>
+        <option value="">Selecione seu estado</option>
+        <option value="AC">Acre</option>
+        <option value="AL">Alagoas</option>
+        <option value="AP">Amapá</option>
+        <option value="AM">Amazonas</option>
+        <option value="BA">Bahia</option>
+        <option value="CE">Ceará</option>
+        <option value="DF">Distrito Federal</option>
+        <option value="ES">Espírito Santo</option>
+        <option value="GO">Goiás</option>
+        <option value="MA">Maranhão</option>
+        <option value="MT">Mato Grosso</option>
+        <option value="MS">Mato Grosso do Sul</option>
+        <option value="MG">Minas Gerais</option>
+        <option value="PA">Pará</option>
+        <option value="PB">Paraíba</option>
+        <option value="PR">Paraná</option>
+        <option value="PE">Pernambuco</option>
+        <option value="PI">Piauí</option>
+        <option value="RJ">Rio de Janeiro</option>
+        <option value="RN">Rio Grande do Norte</option>
+        <option value="RS">Rio Grande do Sul</option>
+        <option value="RO">Rondônia</option>
+        <option value="RR">Roraima</option>
+        <option value="SC">Santa Catarina</option>
+        <option value="SP">São Paulo</option>
+        <option value="SE">Sergipe</option>
+        <option value="TO">Tocantins</option>
+    </select>
+</div> 
                 </div>
 
 
@@ -194,10 +289,12 @@
 
 
                 <!-- BOTÃO -->
-                <button type="submit">
-                    ➤ &nbsp; Enviar mensagem
-                </button>
-
+          <button type="submit" class="btn btn-outline-primary text-white" >
+           enviar 
+           </button>
+             <button type="reset" class="btn btn-outline-primary text-white" >
+             canselar
+        </button>
             </form>
 
         </section>
