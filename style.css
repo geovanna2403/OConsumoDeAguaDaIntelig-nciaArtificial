@@ -4,6 +4,47 @@
 #1E6FB8 azul principal
 #DFF3E1 fundo
 #20323F Tom escuro*/
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap'); /*fonte dos textos*/
+
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');/*fonte do titulo*/
+
+:root {
+
+    /* FAMÍLIAS DAS FONTES */
+    --fonte-texto: 'Karla', sans-serif;
+    --fonte-titulo: 'Michroma', sans-serif;
+
+    /* TAMANHOS DAS FONTES */
+    --tamanho-texto: 1rem;
+    --tamanho-subtitulo: 1.5rem;
+    --tamanho-titulo: 2rem;
+
+    /* PESOS DAS FONTES */
+    --peso-texto: 400;
+    --peso-subtitulo: 400;
+    --peso-titulo: 400;
+}
+
+/* TEXTOS */
+body {
+    font-family: var(--fonte-texto);
+    font-size: var(--tamanho-texto);
+    font-weight: var(--peso-texto);
+}
+
+/* TÍTULOS PRINCIPAIS */
+h1 {
+    font-family: var(--fonte-titulo);
+    font-size: var(--tamanho-titulo);
+    font-weight: var(--peso-titulo);
+}
+
+/* SUBTÍTULOS */
+h2, h3 {
+    font-family: var(--fonte-titulo);
+    font-size: var(--tamanho-subtitulo);
+    font-weight: var(--peso-subtitulo);
+}
 
 body {
     margin: 0;
@@ -414,6 +455,51 @@ h3{
     text-align: center;
 }
 
+/* ===== QR CODE DO SITE ===== */
+
+.qrcode-site {
+    width: 90%;
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 35px;
+    background-color: #DFF3E1;
+    border-left: 6px solid #1E6FB8;
+    color: #20323F;
+    text-align: center;
+}
+
+.qrcode-site h2 {
+    color: #0F6B4F;
+    margin-bottom: 15px;
+}
+
+.qrcode-site p {
+    margin-bottom: 25px;
+    line-height: 1.7;
+}
+
+#qrcode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+#qrcode img,
+#qrcode canvas {
+    max-width: 100%;
+    height: auto;
+    padding: 10px;
+    background-color: white;
+}
+
+@media (max-width: 600px) {
+    .qrcode-site {
+        width: 95%;
+        padding: 20px;
+        margin: 35px auto;
+    }
+}
 /*sobre==========================================================================================================*/
 .identificacao-site {
     color: #A5E9E6;
@@ -998,21 +1084,69 @@ main a:hover {
         width: 100%;
     }
 }
-/* CARROSSEL - COMPUTADOR */
-@media (min-width: 992px) {
+/* ===== CARROSSEL DA PARTE 2 ===== */
 
-    .consumo-texto .carousel {
-        width: 300%;
-        max-width: none;
-        margin: 20px 0;
+.consumo-conteudo {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+}
+
+.consumo-texto {
+    width: 100%;
+}
+
+.carrossel-consumo {
+    width: 100%;
+    max-width: 1100px;
+    margin: 25px auto;
+    border: 3px solid #20323F;
+    border-radius: 12px;
+    padding: 8px;
+}
+
+.carrossel-consumo .carousel {
+    width: 100%;
+    max-width: 100%;
+}
+
+.carrossel-consumo .carousel-item img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 480px;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+.formas-consumo {
+    width: 100%;
+}
+
+/* CELULAR */
+@media (max-width: 767px) {
+
+    .carrossel-consumo .carousel-item img {
+        height: 300px;
     }
 
-    .consumo-texto .carousel img {
-        width: 100%;
-        height: 400px;
-        object-fit: cover;
-    }
+}
 
+/* Setas do carrossel */
+#car .carousel-control-prev,
+#car .carousel-control-next {
+    width: 8%;
+    opacity: 1;
+}
+
+#car .carousel-control-prev-icon,
+#car .carousel-control-next-icon {
+    background-color: #1E6FB8;
+    border-radius: 50%;
+    background-size: 60%;
+    width: 45px;
+    height: 45px;
 }
 /*midia==========================================================================================================*/
 /* CONFIGURAÇÕES GERAIS */
@@ -1188,7 +1322,7 @@ body {
 }
 
 .banner-imagem img {
-    width: 100%;
+    width: 115%;
     max-width: 100%;
     height: auto;
     object-fit: contain;
@@ -1200,6 +1334,8 @@ body {
     background: transparent !important;
     box-shadow: none !important;
     border-radius: 0;
+    transform: scale(1.2);
+transform-origin: center;
 }
 
 
@@ -1352,6 +1488,7 @@ footer {
         display: block;
         padding: 25px 6%;
         min-height: auto;
+        transform: none;
     }
 
     .banner .row {
@@ -1386,6 +1523,153 @@ footer {
         object-fit: contain;
     }
 }
+
+/* BUSCA DA PÁGINA TEMA */
+
+.busca-tema {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 25px;
+    background-color: #DFF3E1;
+    border-left: 5px solid #1E6FB8;
+    color: #20323F;
+}
+
+.busca-tema h3 {
+    color: #0F6B4F;
+    margin-bottom: 12px;
+}
+
+.busca-tema p {
+    margin-bottom: 18px;
+}
+
+.busca-tema input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #1E6FB8;
+    background-color: #ffffff;
+    color: #20323F;
+    outline: none;
+}
+
+.busca-tema input:focus {
+    border-color: #0F6B4F;
+}
+
+#resultadosBusca {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+#resultadosBusca button {
+    padding: 10px;
+    text-align: left;
+    background-color: #1E6FB8;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#resultadosBusca button:hover {
+    background-color: #0F6B4F;
+}
+
+
+/* ===== QUIZ DE GEOGRAFIA ===== */
+
+.quiz-geografia {
+    width: 90%;
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 35px;
+    background-color: #DFF3E1;
+    border-left: 6px solid #1E6FB8;
+    color: #20323F;
+}
+
+.quiz-geografia h2 {
+    color: #0F6B4F;
+    margin-bottom: 15px;
+}
+
+.quiz-geografia > p {
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+#perguntaQuiz {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#alternativasQuiz {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.alternativa-quiz {
+    width: 100%;
+    padding: 15px;
+    text-align: left;
+    background-color: #20323F;
+    color: #DFF3E1;
+    border: 2px solid #20323F;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.alternativa-quiz:hover {
+    background-color: #1E6FB8;
+    border-color: #1E6FB8;
+}
+
+#resultadoQuiz {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #0F6B4F;
+}
+
+#proximaPergunta {
+    margin-top: 15px;
+    padding: 12px 25px;
+    background-color: #0F6B4F;
+    color: #DFF3E1;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#proximaPergunta:hover {
+    background-color: #1E6FB8;
+}
+
+/* RESPONSIVIDADE DO QUIZ */
+
+@media (max-width: 600px) {
+
+    .quiz-geografia {
+        width: 95%;
+        padding: 20px;
+        margin: 35px auto;
+    }
+
+    #perguntaQuiz {
+        font-size: 17px;
+    }
+
+    .alternativa-quiz {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+}
+
 
 /*contato==========================================================================================================*/
 
