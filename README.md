@@ -1,4 +1,4 @@
-cores
+cores:
 #0F6B4F verde principal
 #1E6FB8 azul principal
 #DFF3E1 fundo
