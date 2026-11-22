@@ -1,4 +1,11 @@
 
+
+// Para o usar o Bootstrap no site, pesquisei sobre
+// e aprendi a utilizar o recurso de menu responsivo.
+// Utilizei o Bootstrap para adaptar o menu a diferentes tamanhos de tela,
+// deixando em botão quando estiver em celulares.
+// No site de Português, esse recurso foi desenvolvido utilizando JS.
+
 // ==========================================
 // 1. MENSAGEM AO RECARREGAR A PÁGINA
 // ==========================================
@@ -52,9 +59,7 @@ function formatarTitulo(titulo) {
     return titulo.trim();
 }
 
-function formatarValor(valor, casas = 1) {
-    return Number(valor).toFixed(casas);
-}
+
 
 
 // ==========================================
@@ -278,7 +283,18 @@ document.addEventListener("DOMContentLoaded", function() {
     let pontuacao = 0;
     let respondeu = false;
     let finalizado = false;
+// VALIDAR AS PERGUNTAS DO QUIZ
 
+let indice = 0;
+
+while (indice < perguntas.length) {
+
+    if (perguntas[indice].alternativas.length === 0) {
+        console.error("Pergunta sem alternativas!");
+    }
+
+    indice++;
+}
 
     // MOSTRAR PERGUNTA
 
