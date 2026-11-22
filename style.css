@@ -1,3 +1,24 @@
+/*cores
+#0F6B4F verde principal
+#1E6FB8 azul principal
+#DFF3E1 fundo
+#20323F Tom escuro
+Para o site de Geografia, cujo tema é “O consumo de água pela inteligência artificial”, escolhemos uma paleta de cores que representa os principais
+elementos abordados no trabalho. O verde simboliza a natureza, a sustentabilidade e a necessidade de preservar os recursos naturais. O azul representa 
+a água, elemento central do tema, destacando sua importância para a vida e a preocupação com o alto consumo desse recurso pelos sistemas de inteligência
+artificial. O fundo em verde claro foi utilizado para transmitir leveza e tornar a leitura mais agradável, enquanto o tom escuro cria contraste, melhora
+a legibilidade e deixa o site com uma aparência mais moderna e organizada. Com essa combinação,
+buscamos criar um visual que reforçasse a mensagem de conscientização sobre o uso responsável da água e os impactos ambientais da tecnologia.
+
+Escolha das fontes dos sites
+Karla fonte dos textos
+Michroma fonte do titulo
+Para os dois sites, escolhemos as fontes Michroma e Karla porque elas oferecem um bom equilíbrio entre estilo e legibilidade.
+A fonte Michroma foi utilizada nos títulos por possuir um design moderno e marcante, chamando a atenção para os principais conteúdos da página e
+dando personalidade ao site. Já a fonte Karla foi escolhida para os textos por ser limpa, simples e de fácil leitura, permitindo que as informações 
+sejam compreendidas com mais conforto.
+A combinação dessas duas fontes deixa o visual mais organizado, moderno e agradável, além de melhorar a experiência de quem acessa os sites.
+*/
 /*geral*/
 /*cores
 #0F6B4F verde principal
@@ -48,7 +69,7 @@ h2, h3 {
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+   
 }
 
 .cabecalho-site {
@@ -455,51 +476,6 @@ h3{
     text-align: center;
 }
 
-/* ===== QR CODE DO SITE ===== */
-
-.qrcode-site {
-    width: 90%;
-    max-width: 900px;
-    margin: 60px auto;
-    padding: 35px;
-    background-color: #DFF3E1;
-    border-left: 6px solid #1E6FB8;
-    color: #20323F;
-    text-align: center;
-}
-
-.qrcode-site h2 {
-    color: #0F6B4F;
-    margin-bottom: 15px;
-}
-
-.qrcode-site p {
-    margin-bottom: 25px;
-    line-height: 1.7;
-}
-
-#qrcode {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-}
-
-#qrcode img,
-#qrcode canvas {
-    max-width: 100%;
-    height: auto;
-    padding: 10px;
-    background-color: white;
-}
-
-@media (max-width: 600px) {
-    .qrcode-site {
-        width: 95%;
-        padding: 20px;
-        margin: 35px auto;
-    }
-}
 /*sobre==========================================================================================================*/
 .identificacao-site {
     color: #A5E9E6;
@@ -757,13 +733,11 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
+.pagina-tema {
     background-color: #f0f7fa;
     color: #263746;
     line-height: 1.8;
 }
-
 
 
 
@@ -815,13 +789,7 @@ p {
     text-align: justify;
 }
 
-.conclusao {
-    background-color: #DCEEFF;
-    padding: 25px;
-    border-radius:12px;
-    margin-bottom:25px;
 
-}
 
 /* ===== PARTE 2 - CONSUMO DE ÁGUA ===== */
 
@@ -884,6 +852,7 @@ p {
     background-color: #DCEEFF;;
     padding: 18px;
     border-radius: 12px;
+     width: 100%;
 }
 
 .formas-consumo h3 {
@@ -1120,9 +1089,7 @@ main a:hover {
     margin: 0 auto;
 }
 
-.formas-consumo {
-    width: 100%;
-}
+
 
 /* CELULAR */
 @media (max-width: 767px) {
@@ -1151,14 +1118,9 @@ main a:hover {
 /*midia==========================================================================================================*/
 /* CONFIGURAÇÕES GERAIS */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
+
+.pagina-midia {
     background: linear-gradient(
         120deg,
         #f5fbff,
@@ -1166,7 +1128,6 @@ body {
     );
     color: #10365d;
 }
-
 
 /* CABEÇALHO */
 
@@ -1434,7 +1395,7 @@ footer {
         grid-template-columns: repeat(2, 1fr);
     }
 
-}
+} /* fecha o media de 900px */
 
 @media (max-width: 600px) {
 
@@ -1674,24 +1635,13 @@ footer {
 /*contato==========================================================================================================*/
 
 /* CONFIGURAÇÕES GERAIS */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
+
+.pagina-contato {
     color: #153b50;
     background-color: #f8fcfc;
 }
 
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
 
 .logo-imagem {
      width: 95px;
@@ -1791,18 +1741,29 @@ nav a.ativo {
 }
 
 /* CELULAR */
+/* CELULAR */
+
 @media (max-width: 768px) {
+
     .banner-contato {
         flex-direction: column;
         text-align: left;
     }
 
-    .banner-imagem img {
-        max-width: 100%;
+    .banner-contato .banner-imagem {
+        width: 100%;
+        height: 260px;
+    }
+
+    .banner-contato .banner-imagem img {
+        width: 100%;
+        height: 100%;
+        max-width: 100% !important;
+        object-fit: contain;
+        transform: scale(1.1);
     }
 
 }
-
 
 /* ÁREA PRINCIPAL */
 .conteudo {

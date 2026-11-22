@@ -1,10 +1,20 @@
-window.addEventListener("load", function() {
-    if (performance.getEntriesByType("navigation")[0].type === "reload") {
-        alert("Bem vindo ao nosso site!");
-    }
 
+// ==========================================
+// 1. MENSAGEM AO RECARREGAR A PÁGINA
+// ==========================================
+
+window.addEventListener("load", function() {
+    const navegacao = performance.getEntriesByType("navigation")[0];
+
+    if (navegacao && navegacao.type === "reload") {
+        alert("Bem-vindo ao nosso site!");
+    }
 });
 
+
+// ==========================================
+// 2. ARRAY DE OBJETOS - ASSUNTOS
+// ==========================================
 
 const assuntos = [
     {
@@ -25,58 +35,91 @@ const assuntos = [
     },
     {
         titulo: "O futuro da água",
-        link: "tema.html#parte5"
+        link: "tema.html#parte6"
     },
     {
         titulo: "Conclusão",
-        link: "tema.html#parte6"
+        link: "tema.html#parte7"
     }
 ];
+
+
+// ==========================================
+// 3. FUNÇÕES DE FORMATAÇÃO
+// ==========================================
+
+function formatarTitulo(titulo) {
+    return titulo.trim();
+}
+
+function formatarValor(valor, casas = 1) {
+    return Number(valor).toFixed(casas);
+}
+
+
+// ==========================================
+// 4. GERAR CARTÕES DE ASSUNTOS
+// ==========================================
 
 document.addEventListener("DOMContentLoaded", function() {
 
     const lista = document.getElementById("lista-assuntos");
-    if (!lista) return;
 
-    function gerarCardsAssuntos() {
-        assuntos.forEach(function(assunto) {
-            lista.innerHTML += `
-                <article class="card">
-                    <h3>${assunto.titulo}</h3>
-                    <a href="${assunto.link}" class="botao-saiba-mais">
-                        Saiba mais
-                    </a>
-                </article>
-            `;
-        });
+    if (lista) {
+
+        function gerarCardsAssuntos() {
+
+            for (let i = 0; i < assuntos.length; i++) {
+
+                const assunto = assuntos[i];
+
+                lista.innerHTML += `
+                    <article class="card">
+                        <h3>${formatarTitulo(assunto.titulo)}</h3>
+                        <a href="${assunto.link}" class="botao-saiba-mais">
+                            Saiba mais
+                        </a>
+                    </article>
+                `;
+            }
+        }
+
+        gerarCardsAssuntos();
     }
-
-    gerarCardsAssuntos();
 
 });
 
 
-const botaoCuriosidade = document.getElementById("botaoCuriosidade");
-const mensagemCuriosidade = document.getElementById("mensagemCuriosidade");
+// ==========================================
+// 5. INTERAÇÃO - BOTÃO DE CURIOSIDADE
+// ==========================================
 
-if (botaoCuriosidade && mensagemCuriosidade) {
+document.addEventListener("DOMContentLoaded", function() {
 
-    botaoCuriosidade.addEventListener("click", function() {
+    const botaoCuriosidade = document.getElementById("botaoCuriosidade");
+    const mensagemCuriosidade = document.getElementById("mensagemCuriosidade");
 
-        mensagemCuriosidade.hidden = !mensagemCuriosidade.hidden;
+    if (botaoCuriosidade && mensagemCuriosidade) {
 
-        if (mensagemCuriosidade.hidden) {
-            botaoCuriosidade.textContent = "Você sabia?";
-        } else {
-            botaoCuriosidade.textContent = "Fechar curiosidade";
-        }
+        botaoCuriosidade.addEventListener("click", function() {
 
-    });
+            mensagemCuriosidade.hidden = !mensagemCuriosidade.hidden;
 
-}
+            if (mensagemCuriosidade.hidden) {
+                botaoCuriosidade.textContent = "Você sabia?";
+            } else {
+                botaoCuriosidade.textContent = "Fechar curiosidade";
+            }
+
+        });
+    }
+
+});
 
 
-// BUSCA DE ASSUNTOS NA PÁGINA TEMA
+// ==========================================
+// 6. BUSCA DE ASSUNTOS NA PÁGINA TEMA
+// ==========================================
 
 document.addEventListener("DOMContentLoaded", function() {
 
@@ -85,26 +128,35 @@ document.addEventListener("DOMContentLoaded", function() {
 
     if (!pesquisa || !resultados) return;
 
-    // Cria um array com os títulos das seções
-   const assuntosTema = Array.from(document.querySelectorAll("main h2, #referencias h2"))
-        .map(function(titulo) {
-            return {
-                nome: titulo.textContent.trim(),
-                secao: titulo.closest("section")
-            };
-        })
-        .filter(function(assunto) {
-            return assunto.secao !== null;
-        });
+    const assuntosTema = Array.from(
+        document.querySelectorAll("main h2, #referencias h2")
+    )
+    .map(function(titulo) {
+        return {
+            nome: titulo.textContent.trim(),
+            secao: titulo.closest("section")
+        };
+    })
+    .filter(function(assunto) {
+        return assunto.secao !== null;
+    });
 
-    // Pesquisa os assuntos
     pesquisa.addEventListener("input", function() {
 
         const texto = pesquisa.value.toLowerCase().trim();
 
-        const encontrados = assuntosTema.filter(function(assunto) {
+        const encontrados = assuntosTema.filter((assunto) => {
             return assunto.nome.toLowerCase().includes(texto);
         });
+
+        const primeiroEncontrado = assuntosTema.find((assunto) => {
+            return assunto.nome.toLowerCase().includes(texto);
+        });
+        if (primeiroEncontrado) {
+    resultados.dataset.primeiroResultado = primeiroEncontrado.nome;
+} else {
+    delete resultados.dataset.primeiroResultado;
+}
 
         resultados.innerHTML = "";
 
@@ -136,12 +188,13 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-
-/* INTERAÇÃO: MUDAR A COR DOS TÍTULOS */
+// ==========================================
+// 7. INTERAÇÃO - MUDAR A COR DOS TÍTULOS
+// ==========================================
 
 document.addEventListener("DOMContentLoaded", function() {
 
-    const titulos = document.querySelectorAll("main h2 ");
+    const titulos = document.querySelectorAll("main h2");
 
     titulos.forEach(function(titulo) {
 
@@ -158,8 +211,9 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-
-/* QUIZ INTERATIVO DE GEOGRAFIA */
+// ==========================================
+// 8. QUIZ INTERATIVO DE GEOGRAFIA
+// ==========================================
 
 document.addEventListener("DOMContentLoaded", function() {
 
@@ -171,6 +225,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (!perguntaHTML || !alternativasHTML || !resultadoHTML || !botaoProximo) return;
 
     // ARRAY DE OBJETOS COM AS PERGUNTAS
+
     const perguntas = [
         {
             pergunta: "1. Por que os data centers precisam de sistemas de refrigeração?",
@@ -181,15 +236,15 @@ document.addEventListener("DOMContentLoaded", function() {
             ],
             correta: 0
         },
-       {
-    pergunta: "2. De onde pode vir a água utilizada na refrigeração dos data centers?",
-    alternativas: [
-        "Da rede de abastecimento, de reservatórios ou de água de reúso.",
-        "Apenas da água do mar.",
-        "Somente da água da chuva."
-    ],
-    correta: 0
-},
+        {
+            pergunta: "2. De onde pode vir a água utilizada na refrigeração dos data centers?",
+            alternativas: [
+                "Da rede de abastecimento, de reservatórios ou de água de reúso.",
+                "Apenas da água do mar.",
+                "Somente da água da chuva."
+            ],
+            correta: 0
+        },
         {
             pergunta: "3. Segundo os dados apresentados no site, quantas pessoas não tinham acesso à água potável gerenciada com segurança em 2024?",
             alternativas: [
@@ -224,7 +279,9 @@ document.addEventListener("DOMContentLoaded", function() {
     let respondeu = false;
     let finalizado = false;
 
+
     // MOSTRAR PERGUNTA
+
     function mostrarPergunta() {
 
         respondeu = false;
@@ -237,7 +294,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         botaoProximo.hidden = true;
 
-        pergunta.alternativas.forEach(function(alternativa, indice) {
+        for (const [indice, alternativa] of pergunta.alternativas.entries()) {
 
             const botao = document.createElement("button");
 
@@ -250,12 +307,13 @@ document.addEventListener("DOMContentLoaded", function() {
             });
 
             alternativasHTML.appendChild(botao);
-
-        });
+        }
 
     }
 
+
     // VERIFICAR RESPOSTA
+
     function verificarResposta(indice) {
 
         if (respondeu) return;
@@ -288,7 +346,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     }
 
+
     // MOSTRAR RESULTADO FINAL
+
     function mostrarResultado() {
 
         finalizado = true;
@@ -306,7 +366,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     }
 
+
     // AVANÇAR OU RECOMEÇAR
+
     botaoProximo.addEventListener("click", function() {
 
         if (finalizado) {
@@ -331,9 +393,46 @@ document.addEventListener("DOMContentLoaded", function() {
 
     });
 
+
     // INICIAR QUIZ
+
     mostrarPergunta();
 
 });
 
+
+// FORMULÁRIO DE CONTATO
+document.addEventListener("DOMContentLoaded", function() {
+
+    const formulario = document.querySelector(".formulario form");
+
+    if (formulario) {
+
+        formulario.addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            const dados = new FormData(formulario);
+
+            const nome = String(dados.get("nome")).trim();
+            const email = String(dados.get("email")).trim();
+            const telefone = String(dados.get("telefone")).trim();
+            const estado = String(dados.get("estado")).trim();
+            const assunto = String(dados.get("assunto")).trim();
+            const mensagem = String(dados.get("mensagem")).trim();
+
+            if (!nome || !email || !telefone || !estado || !assunto || !mensagem) {
+                alert("Preencha todos os campos antes de continuar!");
+                return;
+            }
+
+            alert(`Olá, ${nome}! Sua mensagem foi registrada nesta demonstração. Obrigado pelo contato!`);
+
+            formulario.reset();
+
+        });
+
+    }
+
+});
 
