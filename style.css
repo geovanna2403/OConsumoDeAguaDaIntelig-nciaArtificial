@@ -476,6 +476,21 @@ h3{
     text-align: center;
 }
 
+.qr-code {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.qr-code img {
+    width: 130px;
+    height: 130px;
+    object-fit: contain;
+}
+
+.qr-code p {
+    margin-top: 8px;
+    font-weight: bold;
+}
 /*sobre==========================================================================================================*/
 .identificacao-site {
     color: #A5E9E6;
